@@ -1,0 +1,19 @@
+
+<input type="hidden" name="id"[(ngModel)]="user.id">
+<input type="text" name="name" [(ngModel)]="user.name">
+<input type="text" name="createdAt" [(ngModel)]="user.createdAt">
+<input type="text" name="avatar" [(ngModel)]="user.avatar">
+<button (click)="AddUser(user)">add User</button>
+<button (click)="delateUser(user.id)">delate User</button>
+<button (click)="reset()">edit user</button>
+<br>
+<li *ngFor="let item of data;">
+ id {{item.id}}
+  createdAt {{item.createdAt}}
+  name {{item.name}}
+  avatar <img src="{{item.avatar}}">
+  <button (click)="getUserById(item.id)">edit </button>
+
+vvv
+</li>
+
